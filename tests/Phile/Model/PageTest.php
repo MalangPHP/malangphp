@@ -61,9 +61,6 @@ class PageTest extends \PHPUnit_Framework_TestCase
         // check if '/index' is stripped correctly
         $this->assertEquals('', $this->pageRepository->findByPath('/index')->getUrl());
 
-        // root page
-        $this->assertEquals('setup', $this->pageRepository->findByPath('/setup')->getUrl());
-
         // sub index
         $this->assertEquals('sub', $this->pageRepository->findByPath('/sub/index')->getUrl());
 
@@ -78,7 +75,7 @@ class PageTest extends \PHPUnit_Framework_TestCase
     {
         $page = $this->pageRepository->findByPath('/');
         $page->setContent("testContent");
-        $this->assertEquals("<p>testContent</p>\n", $page->getContent());
+        $this->assertEquals("<p>testContent</p>", $page->getContent());
     }
 
     /**

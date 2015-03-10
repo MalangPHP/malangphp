@@ -1,8 +1,6 @@
 # Composer
 composer.phar
-
-# Twig
-lib/vendor/*
+lib/vendor
 
 # OS Generated
 .DS_Store*
@@ -17,8 +15,6 @@ dist/*
 docs/*
 
 # User themes
-themes/*
-!themes/index.html
 !themes/default/*
 
 # PHPStorm settings
