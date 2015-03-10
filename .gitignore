@@ -1,0 +1,36 @@
+# Composer
+composer.phar
+
+# Twig
+lib/vendor/*
+
+# OS Generated
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+*.swp
+
+# distribution build directory
+dist/*
+# phpDocs
+docs/*
+
+# User themes
+themes/*
+!themes/index.html
+!themes/default/*
+
+# PHPStorm settings
+.idea
+
+# temp folder
+temp/*
+!temp/index.html
+!temp/cache
+temp/cache/*
+!temp/cache/index.html
+
+# datastorage
+datastorage/*
+!datastorage/.htaccess
