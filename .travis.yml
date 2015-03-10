@@ -5,7 +5,7 @@ env:
 # Language
 language: php
 php:
-- hhvm
+- 5.6
 # Scripts
 before_script:
 - composer selfupdate --quiet

@@ -30,7 +30,7 @@
         "vendor-dir": "lib/vendor"
     },
     "require": {
-        "hhvm": "~3.3",
+        "php": "~5.6.0",
         "twig/twig": "1.15.*",
         "michelf/php-markdown": ">=1.4",
         "phile-cms/plugin-installer-plugin": "dev-master",
