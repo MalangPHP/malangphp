@@ -98,14 +98,14 @@ class Twig implements TemplateInterface
             }
             Event::triggerEvent('template_engine_registered', array('engine' => &$twig, 'data' => &$twig_vars));
 
-            $file = $twig_vars['theme_dir'].'/'.$this->page->getMeta()->get('template').'.html';
+            $file = $twig_vars['theme_dir'].'/'.$this->page->getMeta()->get('template').'.twig';
             if ($this->page->getMeta()->get('template') !== null && file_exists($file)) {
                 $template = $this->page->getMeta()->get('template');
             } else {
                 $template = 'index';
             }
 
-            $output = $twig->render($template.'.html', $twig_vars);
+            $output = $twig->render($template.'.twig', $twig_vars);
         }
 
         return $output;
