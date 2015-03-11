@@ -10,7 +10,7 @@
 $config = [
     'site_title'    => 'Malang PHP User Group',
     'theme'         => 'default',
-    'date_format'   => 'js M Y',
+    'date_format'   => 'jS M Y',
     'pages_order'   => 'meta.date:desc',
     'charset'       => 'utf-8',
     'encryptionKey' => '{]]kK3tSli])fNk3LLWPNt)9LF?MWAlrL=g7d)JXdIEfd75!GgJuyI36TqIcNQ)M',
