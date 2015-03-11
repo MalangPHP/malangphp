@@ -1,3 +1,26 @@
-body {
-	background: green;
+@import "site-variable";
+@import "lib/normalize";
+@import "lib/baseline";
+@import "lib/grid";
+
+/**
+ * Global Styles
+ */
+
+code {
+	font-family: 'PT Mono', monospace;
+}
+
+.container {
+	.column(6);
+}
+
+/**
+ * Header
+ */
+
+#header {
+	h1 {
+		text-transform: uppercase;
+	}
 }

@@ -32,7 +32,7 @@ Text files are marked up using [Markdown](http://daringfireball.net/projects/mar
 
 At the top of text files you can place a block comment and specify certain attributes of the page. For example:
 
-~~~ .markdown
+```md
 /*
 Title: Welcome
 Description: This description will go in the meta description tag
@@ -40,11 +40,11 @@ Author: Joe Bloggs
 Date: 2013/01/01
 Robots: noindex,nofollow
 */
-~~~
+```
 
 Phile also allows HTML style block comments:
 
-~~~ .html
+```html
 <!--
 Title: Welcome
 Description: This description will go in the meta description tag
@@ -52,7 +52,7 @@ Author: Joe Bloggs
 Date: 2013/01/01
 Robots: noindex,nofollow
 -->
-~~~
+```
 
 #### Custom Meta
 
@@ -90,13 +90,13 @@ All themes must include an `index.html` file to define the HTML structure of the
 
 Page listing example:
 
-~~~ .html
+```html
 <ul class="nav">
   {% for page in pages %}
     <li><a href="{{ page.url }}">{{ page.title }}</a></li>
   {% endfor %}
 </ul>
-~~~
+```
 
 ### Config
 

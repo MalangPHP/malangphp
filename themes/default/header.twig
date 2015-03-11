@@ -1,0 +1,12 @@
+<header id="header">
+	<div class="logo">
+		<h1><a href="{{ base_url }}">{{ site_title }}</a></h1>
+	</div>
+	<ul class="nav">
+		{% for page in pages %}
+			{% if page.meta.template != 'blog' %}
+		<li><a href="{{ page.url }}" {% if page.url == current_page.url[1:] %}class="active"{% endif %}>{{ page.title }}</a></li>
+			{% endif %}
+		{% endfor %}
+	</ul>
+</header>

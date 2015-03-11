@@ -45,11 +45,17 @@ module.exports = (grunt) ->
         files: [dist_dir + '/style.css']
         options:
           livereload: true
+      markdown:
+        files: [
+          './content/{,*/}*.md'
+        ]
+        tasks: ['clean:cache']
+        options:
+          livereload: true
       static:
         files: [
           src_dir + '/images/{,*/}*.{png, jpg, jpeg, svg}'
           src_dir + '/{,*/}*.{twig, html}'
-          './content/{,*/}*.md'
         ]
         options:
           livereload: true
@@ -115,6 +121,15 @@ module.exports = (grunt) ->
             dist_dir + '/*.css'
             dist_dir + '/*.js'
             dist_dir + '/*.map'
+          ]
+        ]
+      cache:
+        files: [
+          dot: false
+          src: [
+            './lib/cache/*'
+            '!./lib/cache/.gitignore'
+            '!./lib/cache/.htaccess'
           ]
         ]
 
