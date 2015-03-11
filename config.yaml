@@ -29,7 +29,7 @@ vagrantfile-local:
                     - '--hiera_config /vagrant/puphpet/puppet/hiera.yaml'
                     - '--parser future'
         synced_folder:
-            QiQ6ujTPctfQ:
+            mfnAJfeRrswp:
                 owner: www-data
                 group: www-data
                 source: ./web
@@ -81,19 +81,19 @@ apache:
         manage_group: false
         sendfile: 0
     modules:
-        - rewrite
         - deflate
+        - rewrite
     vhosts:
-        ydds2yuaemyc:
+        nnxk50gjvku0:
             servername: malangphp.dev
             serveraliases:
                 - www.malangphp.dev
             docroot: /var/www/web
-            port: '443'
+            port: '80'
             setenv:
                 - 'APP_ENV dev'
             directories:
-                zqqfp8uixgxy:
+                chiu5qyoyo3k:
                     provider: directory
                     path: /var/www/web
                     options:
@@ -108,7 +108,7 @@ apache:
                     custom_fragment: ''
             engine: php
             custom_fragment: ''
-            ssl: '1'
+            ssl: '0'
             ssl_cert: ''
             ssl_key: ''
             ssl_chain: ''
@@ -122,7 +122,7 @@ nginx:
         proxy_buffers: '4 256k'
     upstreams: {  }
     vhosts:
-        eqsmfmsqusii:
+        tcwkt7dv5w8x:
             proxy: ''
             server_name: awesome.dev
             server_aliases:
@@ -207,7 +207,7 @@ mysql:
     root_password: '123'
     adminer: 0
     databases:
-        qL0dlvUknDMR:
+        IpsKC3p6DPCO:
             grant:
                 - ALL
             name: dbname

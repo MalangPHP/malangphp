@@ -82,7 +82,7 @@ module.exports = (grunt) ->
             npm_dir + '/lesshat/build'
             src_dir + '/less'
           ]
-          sourceMap: true
+          sourceMap: false
         files:
           './themes/default/dist/style.css': './themes/default/less/main.less'
 
@@ -112,8 +112,9 @@ module.exports = (grunt) ->
         files: [
           dot: true
           src: [
-            'dist_dir/*.css'
-            'dist_dir/*.js'
+            dist_dir + '/*.css'
+            dist_dir + '/*.js'
+            dist_dir + '/*.map'
           ]
         ]
 
