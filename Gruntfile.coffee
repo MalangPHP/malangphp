@@ -130,6 +130,6 @@ module.exports = (grunt) ->
     'cssmin:dist'
     'notify:build'
   ]
-  grunt.registerTask 'heroku:production', ['build']
+  grunt.registerTask 'heroku', ['build']
 
 
