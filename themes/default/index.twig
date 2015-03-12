@@ -2,26 +2,39 @@
 {% include 'head.twig' with {'type': 'index'} %}
 <div class="container">
 	{% include 'header.twig' %}
+	{% include 'nav.twig' %}
 	<section id="content">
-			{% if current_page.title == 'Welcome' %}
-				<h2>Latest Blog Posts</h2>
-				{% for page in pages %}
-					{% if page.meta.template == 'blog' %}
-						<article>
-							<h3><a href="{{ page.url }}">{{ page.meta.title }}</a></h3>
+		{{ content }}
+		{% if current_page.title == 'Home' %}
+			{% for page in pages %}
+				{% if page.meta.template == 'blog' %}
+					<article>
+						<header>
+							<h2 class="h3"><a href="{{ page.url }}">{{ page.meta.title }}</a></h2>
+						</header>
+						<p>{{ page.content|striptags|slice(0, 300) }} <a href="{{ page.url }}">Baca ..</a></p>
+						<footer>
 							<span class="post-date">Date: <em>{{ page.meta.date|date(config.date_format) }}</em></span><br>
-							<span class="post-category">Category: <em>{{ page.meta.category }}</em></span><br>
-							<span class="post-keywords">Keywords: <em>{{ page.meta.keywords }}</em></span><br>
-							<p>{{ page.content|striptags|slice(0, 300) }}...</p>
-							<a href="{{ page.url }}" title="{{ page.title }}" class="btn">Read More</a>
-						</article>
-					{% endif %}
-				{% endfor %}
-			{% endif %}
-			{{ content }}
-		</div>
+						</footer>
+					</article>
+				{% endif %}
+			{% endfor %}
+		{% else %}
+			{% for page in siblings %}
+				<article>
+					<header>
+						<h2 class="h3"><a href="{{ page.url }}">{{ page.meta.title }}</a></h2>
+					</header>
+					<p>{{ page.content|striptags|slice(0, 300) }} <a href="{{ page.url }}">Baca ..</a></p>
+					<footer>
+						<span class="post-date">Date: <em>{{ page.meta.date|date(config.date_format) }}</em></span><br>
+					</footer>
+				</article>
+			{% endfor %}
+		{% endif %}
 	</section>
 	{% include 'footer.twig' %}
 </div>
+{% include 'scripts.twig' %}
 </body>
 </html>

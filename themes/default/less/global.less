@@ -1,0 +1,31 @@
+body {
+	margin:0;
+	padding:0;
+}
+
+a {
+	color: @brand-color;
+	text-decoration: none;
+	.transition(color .1s ease-in-out);
+	&:hover {
+		color: darken(@brand-color, 10%);
+	}
+	&:visited {
+		color: lighten(@fg-color, 30%);
+	}
+	&:hover:visited {
+		color: lighten(@brand-color, 10%);
+	}
+}
+
+.accent {
+	color: darken(@brand-color, 5%);
+}
+
+.svg-container {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	vertical-align: middle;
+	overflow: hidden;
+}

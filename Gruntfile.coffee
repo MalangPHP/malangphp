@@ -80,8 +80,10 @@ module.exports = (grunt) ->
             )
           ]
           sourceMap: false
-        files:
+        files: [
           './themes/default/dist/style.css' : './themes/default/less/main.less'
+          './themes/default/dist/font.css' : './themes/default/less/font.less'
+        ]
       dev:
         options:
           paths: [
@@ -91,6 +93,7 @@ module.exports = (grunt) ->
           sourceMap: false
         files:
           './themes/default/dist/style.css': './themes/default/less/main.less'
+          './themes/default/dist/font.css' : './themes/default/less/font.less'
 
     # Uglify
     # ======

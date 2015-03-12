@@ -1,0 +1,9 @@
+<nav role="navigation" id="nav">
+	<ul>
+		{% for page in pages %}
+			{% if page.meta.template != 'blog' and page.meta.template != 'event' and page.meta.title != 'Home' %}
+		<li {% if page.url == current_page.url[1:] %}class="active"{% endif %}><a href="{{ page.url }}">{{ page.title }}</a></li>
+			{% endif %}
+		{% endfor %}
+	</ul>
+</nav>

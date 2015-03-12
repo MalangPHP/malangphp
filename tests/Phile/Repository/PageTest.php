@@ -41,6 +41,6 @@ class PageTest extends \PHPUnit_Framework_TestCase
     {
         $page = $this->pageRepository->findByPath('/');
         $this->assertInstanceOf('\Phile\Model\Page', $page);
-        $this->assertEquals('Welcome', $page->getTitle());
+        $this->assertEquals('Home', $page->getTitle());
     }
 }

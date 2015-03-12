@@ -1,0 +1,113 @@
+html {
+	font-size: 1em;
+}
+
+body {
+	font-family: @body_family;
+	font-weight: 400;
+	line-height: 1.9375em;
+	text-rendering: optimizeLegibility;
+	-moz-font-feature-settings:'onum' 1;
+	-ms-font-feature-settings:'onum' 1;
+	-o-font-feature-settings:'onum' 1;
+	-webkit-font-feature-settings:'onum' 1;
+}
+
+p, ul, ol, pre, table, blockquote {
+	margin-top: 1.9375em;
+	margin-bottom: 1.9375em;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	font-weight: 700;
+	color: lighten(@fg-color, 5%);
+}
+
+h1, .h1 {
+	font-size: 2.375em;
+	line-height: 1.631578948em;
+	margin-top: 1.63157895em;
+	margin-bottom: 0.81578947em;
+	@media @desktop {
+		font-size: 4.25em;
+		line-height: 1.367647059em;
+		margin-top: 0.91176471em;
+		margin-bottom: 0.45588235em;
+	}
+}
+
+h2, .h2 {
+	font-size: 1.75em;
+	line-height: 1.107142857em;
+	margin-top: 2.21428571em;
+	margin-bottom: 1.10714286em;
+	@media @desktop {
+		font-size: 2.625em;
+		line-height: 1.476190476em;
+		margin-top: 1.47619048em;
+		margin-bottom: 0.73809524em;
+	}
+}
+
+h3, .h3 {
+	font-size: 1.3125em;
+	line-height: 1.476190476em;
+	margin-top: 1.47619048em;
+	margin-bottom: 1.47619048em;
+	@media @desktop {
+		font-size: 1.625em;
+		line-height: 1.192307692em;
+		margin-top: 1.19230769em;
+		margin-bottom: 1.19230769em;
+	}
+}
+
+h4, .h4 {
+	font-size: 1em;
+	line-height: 1.9375em;
+	margin-top: 1.9375em;
+	margin-bottom: 1.9375em;
+	@media @desktop {
+		font-size: 1em;
+		line-height: 1.9375em;
+		margin-top: 1.9375em;
+		margin-bottom: 1.9375em;
+	}
+}
+
+hr {
+  border: 1px solid;
+  margin: -1px 0;
+}
+
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+b, strong, em, small, code {
+  line-height: 1;
+}
+
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+
+sub {
+  top: 0.4em;
+}
+
+.container {
+	max-width: 378px;
+	margin: 0 auto;
+	padding: 0 15px;
+	@media @tablet {
+		max-width: 570px;
+	}
+	@media @desktop {
+		max-width: 680px;
+	}
+}

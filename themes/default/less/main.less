@@ -1,26 +1,75 @@
 @import "site-variable";
+@import "lesshat";
 @import "lib/normalize";
-@import "lib/baseline";
-@import "lib/grid";
-
-/**
- * Global Styles
- */
-
-code {
-	font-family: 'PT Mono', monospace;
-}
-
-.container {
-	.column(6);
-}
+@import "typography";
+@import "global";
 
 /**
  * Header
  */
 
 #header {
-	h1 {
+	.logo-svg {
+		.translateX(75);
+		.transition(transform .2s ease-in-out, opacity .5s ease-in-out);
+		.logo-fill {
+			fill: @brand-color;
+		}
+		.logo-stroke {
+			stroke: @brand-color;
+		}
+		#lion-text {
+			opacity: 0;
+		}
+		@media @tablet {
+			.translateX(0);
+			#lion-text {
+				opacity: 1;
+			}
+		}
+	}
+	.logo-text {
+		display: none;
+		visibility: hidden;
+	}
+}
+
+/**
+ * Navigation
+ */
+
+#nav {
+	ul {
+		display: block;
+		position: relative;
+		text-align: center;
+		padding-left: 0;
+	}
+	li {
+		list-style-type: none;
+		font-family: @accent_family;
+		font-weight: 700;
+		letter-spacing: 1px;
 		text-transform: uppercase;
+		display: inline-block;
+		.transition(all .15s ease-in-out);
+		a {
+			padding: 10px;
+		}
+		&:not(:first-of-type), &:not(:last-of-type) {
+			margin: 0 10px;
+		}
+		&.active, &:hover {
+			border-radius: 3px;
+		}
+		&.active {
+			background: darken(@bg-color, 10%);
+		}
+		&:hover {
+			background: darken(@brand-color, 3%);
+			a {
+				color: @bg-color;
+			}
+		}
 	}
 }

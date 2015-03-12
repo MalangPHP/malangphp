@@ -2,6 +2,7 @@
 {% include 'head.twig' with {'type': 'blog'} %}
 <div class="container">
 	{% include 'header.twig' %}
+	{% include 'nav.twig' %}
 	<section id="content">
 			<article>
 				<h2><a href="{{ current_page.url }}">{{ current_page.meta.title }}</a></h2>
@@ -15,5 +16,6 @@
 	</section>
 	{% include 'footer.twig' %}
 </div>
+{% include 'scripts.twig' %}
 </body>
 </html>
