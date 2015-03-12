@@ -1,6 +1,21 @@
-body {
+html, body {
 	margin:0;
 	padding:0;
+	height: 100%;
+	background: @bg-color;
+	color: @fg-color;
+}
+
+html {
+	#header, #nav, #content, #footer {
+		opacity: 0;
+		.transition(all .1s ease-in-out);
+	}
+	&.wf-active {
+		#header, #nav, #content, #footer {
+			opacity: 1;
+		}
+	}
 }
 
 a {
@@ -28,4 +43,9 @@ a {
 	width: 100%;
 	vertical-align: middle;
 	overflow: hidden;
+}
+
+.container {
+	min-height: 100%;
+	position: relative;
 }

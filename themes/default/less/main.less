@@ -5,10 +5,27 @@
 @import "global";
 
 /**
+ * Backgrounds
+ */
+body {
+	&:after {
+		position: absolute;
+		width: 100%;
+		height: 3px;
+		display: block;
+		background: @brand-color;
+		top: 0;
+		left: 0;
+		content: '';
+	}
+}
+
+/**
  * Header
  */
 
 #header {
+	padding-top: 1em;
 	.logo-svg {
 		.translateX(75);
 		.transition(transform .2s ease-in-out, opacity .5s ease-in-out);
@@ -72,4 +89,23 @@
 			}
 		}
 	}
+}
+
+/**
+ * Content
+ */
+#content {
+	padding-bottom: 150px;
+}
+
+/**
+ * Footer
+ */
+#footer {
+	height: 100px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-top: 1px solid @fg-color;
 }

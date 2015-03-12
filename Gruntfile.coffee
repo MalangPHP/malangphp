@@ -33,7 +33,7 @@ module.exports = (grunt) ->
           reload: true
       scripts:
         files: [src_dir + '/js/{,*/}*.js']
-        tasks: ['jshint', 'uglify:dev']
+        tasks: ['uglify:dist']
         options:
           spawn: false
       lass:
@@ -102,7 +102,7 @@ module.exports = (grunt) ->
         mangle: true
       dist:
         files:
-          dist_dir + '/main.min.js' : src_dir + '/js/main.js'
+          './themes/default/dist/main.min.js' : './themes/default/js/main.js'
 
     # CSSMin
     # ======
@@ -112,7 +112,7 @@ module.exports = (grunt) ->
           banner: '/* Style definition for ' + pkg.name + '#' + pkg.version + '\n Generated on ' + grunt.template.today('mm-dd-yyyy:hhMMss') + ' */'
           keepSpecialComments: '0'
         files:
-          dist_dir + '/style.min.css' : dist_dir + '/style.css'
+          './themes/default/dist/style.min.css' : './themes/default/dist/style.css'
 
     # Clean
     # =====
@@ -140,6 +140,7 @@ module.exports = (grunt) ->
   grunt.registerTask 'work', [
     'clean:dist'
     'less:dev'
+    'uglify:dist'
     'watch'
   ]
   grunt.registerTask 'build', [

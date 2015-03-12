@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "26aec7c84d979fe05c3984f76d765bd7",
+    "hash": "71e17a83acf8359cd12a823e18f77e0c",
     "packages": [
         {
             "name": "erusev/parsedown",
@@ -240,6 +240,38 @@
                 "phile"
             ],
             "time": "2014-06-19 13:32:21"
+        },
+        {
+            "name": "siezi/phile-markdown-editor",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Schlaefer/phileMarkdownEditor.git",
+                "reference": "2f35343cabdbfbeccdac93de28ca4fa229406267"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Schlaefer/phileMarkdownEditor/zipball/2f35343cabdbfbeccdac93de28ca4fa229406267",
+                "reference": "2f35343cabdbfbeccdac93de28ca4fa229406267",
+                "shasum": ""
+            },
+            "require": {
+                "phile-cms/phile": ">=1.4",
+                "phile-cms/plugin-installer-plugin": ">=1"
+            },
+            "type": "phile-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Online Markdown editor for Phile",
+            "homepage": "https://github.com/Schlaefer/phileMarkdownEditor",
+            "keywords": [
+                "editor",
+                "markdown",
+                "phile"
+            ],
+            "time": "2015-02-27 12:03:48"
         },
         {
             "name": "twig/twig",

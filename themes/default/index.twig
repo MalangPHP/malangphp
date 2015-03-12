@@ -5,21 +5,7 @@
 	{% include 'nav.twig' %}
 	<section id="content">
 		{{ content }}
-		{% if current_page.title == 'Home' %}
-			{% for page in pages %}
-				{% if page.meta.template == 'blog' %}
-					<article>
-						<header>
-							<h2 class="h3"><a href="{{ page.url }}">{{ page.meta.title }}</a></h2>
-						</header>
-						<p>{{ page.content|striptags|slice(0, 300) }} <a href="{{ page.url }}">Baca ..</a></p>
-						<footer>
-							<span class="post-date">Date: <em>{{ page.meta.date|date(config.date_format) }}</em></span><br>
-						</footer>
-					</article>
-				{% endif %}
-			{% endfor %}
-		{% else %}
+		{% if current_page.title != 'Home'  %}
 			{% for page in siblings %}
 				<article>
 					<header>

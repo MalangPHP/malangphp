@@ -15,9 +15,10 @@ $config = [
     'charset'       => 'utf-8',
     'encryptionKey' => '{]]kK3tSli])fNk3LLWPNt)9LF?MWAlrL=g7d)JXdIEfd75!GgJuyI36TqIcNQ)M',
     'plugins'       => [
-        'quasipickle\\family'   => ['active' => true],
-        'phile\\parserMarkdown' => ['active' => false],
-        'phile\\parsedown'      => ['active' => true]
+        'quasipickle\\family'        => ['active' => true],
+        'siezi\\phileMarkdownEditor' => ['active' => true],
+        'phile\\parserMarkdown'      => ['active' => false],
+        'phile\\parsedown'           => ['active' => true]
     ]
 ];
 
