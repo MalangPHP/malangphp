@@ -5,7 +5,7 @@
 	{% include 'nav.twig' %}
 	<section id="content">
 		{{ content }}
-		{% if current_page.title != 'Home'  %}
+		{% if current_page.title != 'Home' and page.meta.template != 'event' %}
 			{% for page in siblings %}
 				<article>
 					<header>
